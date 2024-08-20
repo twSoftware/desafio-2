@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/969932b853.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/Logo.png">
+    </header>
+
+    <main class="encriptador">
+        <section class="encriptador__controles">
+            
+            <textarea rows="4" cols="50" placeholder="Ingrese el texto aqui." id="textoUsuario" class="container__input"></textarea>
+            <p id="mensajeError" style="color:red; display:none;" class="resultado__subtitulo">Solo se permiten letras minúsculas sin acentos.</p>
+
+            <div class="advertencia">
+                <i class="fa-solid fa-circle-exclamation" style="color: #495057; margin: 12px;"></i>
+                <p>Solo letras minúsculas y sin acentos.</p>
+            </div>
+                        
+            <div class="container__botones">
+                <button onclick="obtenerMensajeEncriptar();" id="encriptar" class="container__boton">Encriptar</button>
+                <button onclick="obtenerMensajeDesencriptar();" id="desencriptar" class="boton__habilitado" disabled>Desencriptar</button>
+            </div>
+            
+        </section>
+    
+        <div class="resultados" id="flayer__derecho">
+            <img class="flayer" src="assets/Muneco.png">
+            <h2 class="resultado__titulo">Ningún mensaje fue encontrado.</h2>
+            <p class="resultado__subtitulo" >Ingresa el texto que deseas encriptar o desencriptar.</p>
+            
+        </div>
+        <div class="resultados" id="resultado" style="display: none;">
+            <p class="resultado__mensaje" id="parrafo__resultado"></p>
+            <button id="copiar " class="boton__habilitado" onclick="copiarTexto();">Copiar</button>
+        </div>
+
+    </main>  
+    
+    <script src="scripts/app.js" defer></script>
+    <footer class="footer">
+        <p>Desarrollado por Rubén Meléndez</p>
+    </footer>
+</body>
+</html>
